@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CW Enerji - Bölge Haritası</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="CW Enerji Logo" class="logo">
+        </div>
+        <h1>Hangi Bölgedesin? Haritadan Seç</h1>
+    </header>
+
+    <main>
+        <div class="map-container">
+            <!-- SVG Map with simplified regions -->
+            <svg id="turkey-map" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                <style>
+                    .region {
+                        fill: #e0e0e0;
+                        stroke: #ffffff;
+                        stroke-width: 2;
+                        cursor: pointer;
+                        transition: fill 0.3s;
+                    }
+                    .region:hover {
+                        fill: #ff9800;
+                    }
+                    .region-label {
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        fill: #333;
+                        pointer-events: none;
+                        text-anchor: middle;
+                    }
+                </style>
+
+                <!-- Marmara -->
+                <g id="marmara" class="region-group">
+                    <path d="M 60,60 L 260,50 L 280,160 L 60,140 Z" class="region" />
+                    <text x="170" y="110" class="region-label">Marmara</text>
+                </g>
+
+                <!-- Karadeniz -->
+                <g id="karadeniz" class="region-group">
+                    <path d="M 260,50 L 940,40 L 920,150 L 280,160 Z" class="region" />
+                    <text x="600" y="100" class="region-label">Karadeniz</text>
+                </g>
+
+                <!-- Ege -->
+                <g id="ege" class="region-group">
+                    <path d="M 60,140 L 280,160 L 240,380 L 50,340 Z" class="region" />
+                    <text x="160" y="260" class="region-label">Ege</text>
+                </g>
+
+                <!-- İç Anadolu -->
+                <g id="ic-anadolu" class="region-group">
+                    <path d="M 280,160 L 680,150 L 660,340 L 240,380 Z" class="region" />
+                    <text x="480" y="250" class="region-label">İç Anadolu</text>
+                </g>
+
+                <!-- Doğu Anadolu -->
+                <g id="dogu-anadolu" class="region-group">
+                    <path d="M 680,150 L 920,150 L 940,320 L 660,340 Z" class="region" />
+                    <text x="800" y="240" class="region-label">Doğu Anadolu</text>
+                </g>
+
+                <!-- Akdeniz -->
+                <g id="akdeniz" class="region-group">
+                    <path d="M 240,380 L 660,340 L 640,460 L 220,440 Z" class="region" />
+                    <text x="440" y="400" class="region-label">Akdeniz</text>
+                </g>
+
+                <!-- Güneydoğu Anadolu -->
+                <g id="guneydogu-anadolu" class="region-group">
+                    <path d="M 660,340 L 940,320 L 920,450 L 640,460 Z" class="region" />
+                    <text x="800" y="400" class="region-label">Güneydoğu Anadolu</text>
+                </g>
+            </svg>
+        </div>
+
+        <div id="region-info" class="region-info">
+            <h2 id="region-name">Bir bölge seçin</h2>
+            <div id="region-details">
+                <!-- Details will be injected here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
