@@ -17,14 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     groups.forEach(group => {
         group.addEventListener('click', () => {
-            // Remove active class from all regions
-            document.querySelectorAll('.region').forEach(r => r.classList.remove('active'));
+            // Remove active class from all groups
+            groups.forEach(g => g.classList.remove('active'));
 
-            // Add active class to the clicked region path
-            const path = group.querySelector('.region');
-            if (path) {
-                path.classList.add('active');
-            }
+            // Add active class to the clicked group
+            group.classList.add('active');
 
             const regionId = group.id;
             const data = regionData[regionId];
