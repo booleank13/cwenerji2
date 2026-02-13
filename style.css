@@ -112,3 +112,52 @@ svg {
     font-weight: bold;
     color: #333;
 }
+
+/* Summary Styling */
+#region-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.summary-value {
+    color: #000;
+}
+
+.summary-divider {
+    margin: 0 5px;
+}
+
+/* Province Table Styling */
+.province-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: left;
+}
+
+.province-table th,
+.province-table td {
+    padding: 8px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.province-table th {
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+.province-table td:not(:first-child),
+.province-table th:not(:first-child) {
+    text-align: right;
+}
+
+.province-table tr:last-child td {
+    border-bottom: none;
+}
