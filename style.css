@@ -161,3 +161,26 @@ svg {
 .province-table tr:last-child td {
     border-bottom: none;
 }
+
+/* Footer Styling */
+footer {
+    width: 320px;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.footer-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ED1C24; /* Red color matching Guneydogu Anadolu, good for CTA */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.footer-button:hover {
+    background-color: #C0151C; /* Darker shade of red */
+}
